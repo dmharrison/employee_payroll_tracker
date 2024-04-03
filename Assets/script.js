@@ -27,9 +27,20 @@ const collectEmployees = function() {
       salary=salaryInput
       salaryPrompt=false
     }
-
-  }
-   
+   }
+  //create an employee object that stores input values
+  const employee={
+    firstName: firstName,
+    lastName: lastName,
+    salary: salaryInput
+  };
+//create a method to put employee object into employees array
+  employees.push(employee)
+  //create a prompt to see if the user want to add any more employees
+  const anotherOne= prompt("do you want to add anyone else (yes/no)".toLowerCase())
+  if(anotherOne!=="yes"){
+    addMoreEmployees=false
+  }  
 } return employees
 }
 // Display the average salary
