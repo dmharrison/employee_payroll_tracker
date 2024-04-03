@@ -38,10 +38,8 @@ const collectEmployees = function() {
 //create a method to put employee object into employees array
   employees.push(employee)
   //create a prompt to see if the user want to add any more employees
-  const anotherOne= prompt("do you want to add anyone else (yes/no)".toLowerCase())
-  if(anotherOne!=="yes"){
-    addMoreEmployees=false
-  }  
+  addMoreEmployees= confirm("do you want to add anyone else)".toLowerCase())
+ 
 } return employees
 } 
 
@@ -58,13 +56,11 @@ const avgSalary = totalSalary/employeesArray.length;
 console.log(avgSalary)
 }
 
-
-
-
-
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+  let getRandomEmployee= Math.floor(Math.random()*employeesArray.length);
+
 }
 
 /*
