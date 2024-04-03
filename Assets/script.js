@@ -25,7 +25,7 @@ const collectEmployees = function() {
       if(isNaN(salaryInput)){
       alert("Invalid input. Please enter a number");
     } else {
-      salary=salaryInput;
+      salary=parseInt(salaryInput);
       salaryPrompt=false;
     }
    }
@@ -43,12 +43,24 @@ const collectEmployees = function() {
     addMoreEmployees=false
   }  
 } return employees
-}
+} 
+
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  
+  //calculate the total sum of all employee salaries
+const totalSalary = employeesArray.reduce((acc,employee)=> acc + employee.salary,0);
+
+console.log("should total up the salaries")
+console.log(totalSalary)
+//find the average of the total salary
+const avgSalary = totalSalary/employeesArray.length;
+console.log(avgSalary)
 }
+
+
+
+
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
