@@ -17,22 +17,23 @@ const collectEmployees = function() {
     const lastName= prompt("Please enter employee last name")
     
     //create a salary validation for a number
-    let salary=0
-    let salaryPrompt=true
+    let salary=0;
+    let salaryPrompt=true;
+
     while(salaryPrompt){
       let salaryInput=prompt("Please enter employee salary")
       if(isNaN(salaryInput)){
-      prompt("Invalid input. Please enter a number");
-    } else{
-      salary=salaryInput
-      salaryPrompt=false
+      alert("Invalid input. Please enter a number");
+    } else {
+      salary=salaryInput;
+      salaryPrompt=false;
     }
    }
   //create an employee object that stores input values
   const employee={
     firstName: firstName,
     lastName: lastName,
-    salary: salaryInput
+    salary: salary
   };
 //create a method to put employee object into employees array
   employees.push(employee)
