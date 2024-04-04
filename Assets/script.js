@@ -59,8 +59,8 @@ console.log(avgSalary)
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
-  let getRandomEmployee= Math.floor(Math.random()*employeesArray.length);
-
+  let randomEmployee= Math.floor(Math.random()*employeesArray.length);
+console.log(`Congrats to ${employeesArray[randomEmployee].firstName} ${employeesArray[randomEmployee].lastName}!`);
 }
 
 /*
